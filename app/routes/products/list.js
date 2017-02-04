@@ -1,6 +1,6 @@
 import Ember from 'ember';
 
-/** routes/products/list-products.js */
+/** routes/products/list.js */
 export default Ember.Route.extend({
   model() {
     console.log(Ember.$.getJSON('http://localhost:3000/products'));
@@ -8,12 +8,10 @@ export default Ember.Route.extend({
   },
   actions: {
     delete(product) {
-      product.deleteRecord();
-      product.save();
+      console.log(product);
     },
     edit(product) {
-      //product.
-      product.save();
+      console.log(product);
     }
   }
 });

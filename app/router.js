@@ -10,9 +10,10 @@ Router.map(function() {
   this.route('about');
 
   this.route('products', function() {
-    this.route('list-products', {path: ''});
-    this.route('new-product',   {path: '/new'});
-    this.route('view-product',  {path: '/:id'});
+    this.route('list', {path: ''});
+    this.route('new',   {path: '/new'});
+    this.route('view',  {path: '/:id'});
+    //this.route('edit', { path: '/:id/edit' });
   });
 });
 
