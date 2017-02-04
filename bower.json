@@ -2,7 +2,6 @@
   "name": "poc-emberapp-full",
   "dependencies": {
     "bootstrap-sass": "^3.3.7",
-    "faker": "Faker#3.1.0",
-    "ember": "^2.11.0"
+    "faker": "Faker#3.1.0"
   }
 }
