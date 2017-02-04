@@ -15,8 +15,50 @@
         {{#nav-link-to 'index' tagName="li"}}<a href="">Home</a>{{/nav-link-to}}
         {{#nav-link-to 'products.list' tagName="li"}}<a href="">Products</a>{{/nav-link-to}}
         {{#nav-link-to 'products.new' tagName="li"}}<a href="">New Product</a>{{/nav-link-to}}
-        {{#nav-link-to 'about' tagName="li"}}<a href="">About</a>{{/nav-link-to}}
       </ul>
+
+      <ul class="nav navbar-nav navbar-left">
+        {{#link-to 'protected' tagName='li'}}
+          <a href="#">Protected Page</a>
+        {{/link-to}}
+        {{#if session.isAuthenticated}}
+          {{#link-to 'user-profile' tagName='li'}}
+            <a href="#">Profile</a>
+          {{/link-to}}
+        {{/if}}
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+        {{#nav-link-to 'about' tagName="li"}}<a href="">About</a>{{/nav-link-to}}
+
+        {{#if session.isAuthenticated}}
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">User<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              {{#if session.isAuthenticated}}
+                User info:<br/>
+                <div class="user-info">
+                  <span class="user-info__leader">Hi,</span>
+                  <img class="user-info__avatar" src="{{session.data.authenticated.profile.picture}}">
+                  <span class="user-info__name">{{session.data.authenticated.profile.name}}</span>
+                </div>
+              {{/if}}
+            </ul>
+          </li>
+        {{/if}}
+      </ul>
+
+      {{! display logout button when the session is authenticated, login button otherwise }}
+      {{#if session.isAuthenticated}}
+        <a {{action 'logout'}} class="btn btn-danger navbar-btn pull-right">Logout</a>
+        {{#if sessionAccount.account}}
+          <p class="navbar-text pull-right">Signed in as {{sessionAccount.account.name}}</p>
+        {{/if}}
+      {{else}}
+        <a {{action 'login'}} class="btn btn-success navbar-btn pull-right">Login</a>
+      {{/if}}
+
     </div><!-- /.navbar-collapse -->
+
   </div><!-- /.container-fluid -->
 </nav>

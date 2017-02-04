@@ -32,4 +32,7 @@ export default function() {
   this.timing = 400;      // delay for each request, automatically set to 0 during testing
 
   this.passthrough('/products');
+  this.passthrough('https://raphaelabreu.auth0.com/user/ssodata');
+  this.passthrough('https://raphaelabreu.auth0.com/tokeninfo');
+
 }

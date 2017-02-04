@@ -15,6 +15,11 @@ Router.map(function() {
     this.route('view',  {path: '/:id'});
     //this.route('edit', { path: '/:id/edit' });
   });
+  this.route('protected');
+  this.route('auth-error');
+  this.route('login');
+  this.route('callback');
+  this.route('user-profile');
 });
 
 export default Router;

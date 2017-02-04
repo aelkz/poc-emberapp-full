@@ -1,4 +1,5 @@
 /* jshint node: true */
+var auth0 = require('../auth0-variables');
 
 module.exports = function(environment) {
   var ENV = {
@@ -20,7 +21,25 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+    },
+
+    Auth0: {
+      clientId: auth0.AUTH0_CLIENT_ID,
+      domain: auth0.AUTH0_DOMAIN,
+      callbackUrl: 'http://localhost:4200/callback',
     }
+
+  };
+
+  ENV['ember-simple-auth'] = {
+    authenticationRoute: 'index',
+    routeAfterAuthentication: 'protected',
+    routeIfAlreadyAuthenticated: 'protected'
+  };
+
+  ENV['auth0-ember-simple-auth'] = {
+    clientID: auth0.AUTH0_CLIENT_ID,
+    domain: auth0.AUTH0_DOMAIN
   };
 
   if (environment === 'development') {

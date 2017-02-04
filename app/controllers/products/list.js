@@ -5,11 +5,11 @@ export default Ember.Controller.extend({
     {
       "title": "ID",
       "filteredBy": "id",
-      "routeName": "view-product"
+      "routeName": "products.view"
     },
     {
       "propertyName": "name",
-      "routeName": "view-product",
+      "routeName": "products.view",
       "title": "Name"
     }
   ]
