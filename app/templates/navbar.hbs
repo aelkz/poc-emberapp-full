@@ -13,14 +13,16 @@
     <div class="collapse navbar-collapse" id="main-navbar">
       <ul class="nav navbar-nav">
         {{#nav-link-to 'index' tagName="li"}}<a href="">Home</a>{{/nav-link-to}}
-        {{#nav-link-to 'products.list' tagName="li"}}<a href="">Products</a>{{/nav-link-to}}
-        {{#nav-link-to 'products.new' tagName="li"}}<a href="">New Product</a>{{/nav-link-to}}
+        {{#nav-link-to 'product.list' tagName="li"}}<a href="">Products</a>{{/nav-link-to}}
+        {{#nav-link-to 'product.new' tagName="li"}}<a href="">New Product</a>{{/nav-link-to}}
       </ul>
 
       <ul class="nav navbar-nav navbar-left">
-        {{#link-to 'protected' tagName='li'}}
-          <a href="#">Protected Page</a>
-        {{/link-to}}
+        {{#if session.isAuthenticated}}
+          {{#link-to 'protected' tagName='li'}}
+            <a href="#">Protected Page</a>
+          {{/link-to}}
+        {{/if}}
         {{#if session.isAuthenticated}}
           {{#link-to 'user-profile' tagName='li'}}
             <a href="#">Profile</a>

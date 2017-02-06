@@ -4,6 +4,7 @@
     "bootstrap-sass": "^3.3.7",
     "faker": "Faker#3.1.0",
     "auth0-lock": "^7.10.2",
-    "jsrsasign": "^5.0.1"
+    "jsrsasign": "^5.0.1",
+    "font-awesome": "~4.5.0"
   }
 }

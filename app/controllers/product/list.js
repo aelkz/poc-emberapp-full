@@ -5,12 +5,16 @@ export default Ember.Controller.extend({
     {
       "title": "ID",
       "filteredBy": "id",
-      "routeName": "products.view"
+      "routeName": "product.view"
     },
     {
       "propertyName": "name",
-      "routeName": "products.view",
+      "routeName": "product.view",
       "title": "Name"
+    },
+    {
+      "title": "Delete",
+      "template": "product/delete"
     }
   ]
 });

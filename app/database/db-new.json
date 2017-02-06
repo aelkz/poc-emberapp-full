@@ -1,0 +1,32 @@
+{
+  "data": [
+    {
+      "type": "products",
+      "id": 1,
+      "name": "PC Desktop Dell",
+      "description": "xxxxxxxxxxxxxxxxxxxxx",
+      "unitValue": "99,999",
+      "serialNumber": "XXX-999-999",
+      "acquisitionDate": "01/01/2017",
+      "category": "Hardware",
+      "subCategory": "Computadores/Notebooks",
+      "status": 0,
+      "vendorMail": "vendor1@company.com",
+      "vendorPhone": "+5561988084512"
+    },
+    {
+      "type": "products",
+      "id": 2,
+      "name": "Notebook Dell",
+      "description": "xxxxxxxxxxxxxxxxxxxxx",
+      "unitValue": "500",
+      "serialNumber": "XXX-999-999",
+      "acquisitionDate": "01/01/2017",
+      "category": "Hardware",
+      "subCategory": "Computadores/Notebooks",
+      "status": 0,
+      "vendorMail": "vendor1@company.com",
+      "vendorPhone": "+556133022585"
+    }
+  ]
+}

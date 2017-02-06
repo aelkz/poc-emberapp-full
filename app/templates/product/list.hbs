@@ -1,0 +1,18 @@
+<form class="datatable">
+  <h1>List of registered products:</h1>
+
+  <div class="container-fluid">
+    <section class="container">
+      <div class="container-page">
+
+        <br/>
+        <!-- deleteProduct must be registered in products.list.controller -->
+        {{models-table data=model columns=columns useFilteringByColumns=false delete='deleteProduct'}}
+
+      </div>
+    </section>
+  </div>
+
+  <div class="form-footer"></div>
+
+</form>

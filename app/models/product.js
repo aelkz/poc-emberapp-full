@@ -1,7 +1,7 @@
 import DS from 'ember-data';
+import Ember from 'ember';
 
 export default DS.Model.extend({
-  id: DS.attr('number'),
   name: DS.attr(),
   description: DS.attr(),
   unitValue: DS.attr(),
