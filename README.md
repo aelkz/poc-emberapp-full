@@ -23,6 +23,7 @@ You will need the following things properly installed on your computer.
 ## Running / Development
 
 * `ember serve`
+* `npm run dev` (for json-server mock)
 * Visit your app at [http://localhost:4200](http://localhost:4200).
 
 ### Code Generators
