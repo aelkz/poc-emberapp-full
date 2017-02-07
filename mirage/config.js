@@ -28,29 +28,10 @@ export default function() {
   */
 
   this.urlPrefix = 'http://localhost:3000';
-  this.namespace = 'data';    // make this `/api`, for example, if your API is namespaced
   this.timing = 400;      // delay for each request, automatically set to 0 during testing
 
-  this.passthrough('/data');
-  this.passthrough('/product');
-  this.passthrough('/products');
   this.passthrough('https://raphaelabreu.auth0.com/user/ssodata');
   this.passthrough('https://raphaelabreu.auth0.com/tokeninfo');
-
-  this.get('/product', function(db, request) {
-    return {
-      data: db.product.map(attrs => (
-        { type: 'product', id: attrs.id, attributes: attrs }
-      ))
-    };
-  })
-
-  this.get('/products', function(db, request) {
-    return {
-      data: db.products.map(attrs => (
-        { type: 'products', id: attrs.id, attributes: attrs }
-      ))
-    };
-  })
+  this.passthrough('/products');
 
 }

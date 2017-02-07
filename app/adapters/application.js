@@ -1,7 +1,8 @@
 import DS from 'ember-data';
 import DataAdapterMixin from 'ember-simple-auth/mixins/data-adapter-mixin';
 
-// JSONAdapter seems to cause serializing error
+// JSONAPIAdapter (dont works with json-server)
+
 /**
  * https://discuss.emberjs.com/t/what-is-going-on-with-the-new-json-format-and-the-serializers/8560/3
  * https://github.com/samselikoff/ember-cli-mirage/issues/746
@@ -11,7 +12,11 @@ import DataAdapterMixin from 'ember-simple-auth/mixins/data-adapter-mixin';
  * http://www.ember-cli-mirage.com/docs/v0.1.x/working-with-json-api/
  * https://emberigniter.com/fit-any-backend-into-ember-custom-adapters-serializers/
  */
-export default DS.JSONAPIAdapter.extend(DataAdapterMixin,{
+
+  /*
+   In the Republic of Ember, endpoint locations are translated in an Adapter. Content is translated in a Serializer.
+   */
+export default DS.RESTAdapter.extend(DataAdapterMixin,{
   host:"http://localhost:3000",
   authorizer: 'authorizer:application'
 });
