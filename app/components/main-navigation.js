@@ -7,7 +7,6 @@ export default Ember.Component.extend({
   sessionAccount: service('session-account'),
 
   actions: {
-
     login() {
       this.sendAction('onLogin');
     },

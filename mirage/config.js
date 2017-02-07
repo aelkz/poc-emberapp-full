@@ -33,5 +33,6 @@ export default function() {
   this.passthrough('https://raphaelabreu.auth0.com/user/ssodata');
   this.passthrough('https://raphaelabreu.auth0.com/tokeninfo');
   this.passthrough('/products');
+  this.passthrough('/products/:id');
 
 }

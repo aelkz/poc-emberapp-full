@@ -11,6 +11,7 @@ import DataAdapterMixin from 'ember-simple-auth/mixins/data-adapter-mixin';
  * http://guides.emberjs.com/v2.11.0/models/customizing-serializers/
  * http://www.ember-cli-mirage.com/docs/v0.1.x/working-with-json-api/
  * https://emberigniter.com/fit-any-backend-into-ember-custom-adapters-serializers/
+ * http://thejsguy.com/2015/12/05/which-ember-data-serializer-should-i-use.html
  */
 
   /*

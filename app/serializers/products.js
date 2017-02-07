@@ -7,8 +7,13 @@ import DS from 'ember-data';
 
 export default DS.RESTSerializer.extend({
 
+  normalizeResponse(store, primaryModelClass, payload, id, requestType) {
+    console.log('[3.1] calling serializer.');
+    return {};
+  },
+
   normalizeFindRecordResponse(store, type, payload) {
-    console.log('calling application serializer.');
+    console.log('[3.2] calling serializer.');
     return {
       data: {
         id: payload.id,
@@ -18,7 +23,7 @@ export default DS.RESTSerializer.extend({
           description: payload.description
         }
       }
-    }
+    };
   }
 
 });

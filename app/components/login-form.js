@@ -1,5 +1,6 @@
 /* global Auth0Lock */
 
+/*jshint unused:false*/
 import Ember from 'ember';
 import config from 'starter-seed/config/environment';
 

@@ -11,9 +11,9 @@ Router.map(function() {
 
   this.route('product', function() {
     this.route('list', {path: ''});
-    this.route('new',   {path: '/new'});
-    this.route('view',  {path: '/:id'});
-    //this.route('edit', { path: '/:id/edit' });
+    this.route('new',  {path: '/new'});
+    this.route('view', {path: '/:id'});
+    this.route('edit', {path: '/:id/edit'});
   });
 
   this.route('protected');
