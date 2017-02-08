@@ -9,7 +9,7 @@
       "acquisitionDate": "01/01/2017",
       "category": "Hardware",
       "subCategory": "Computadores/Notebooks",
-      "status": 0,
+      "status": 1,
       "vendorMail": "vendor1@company.com",
       "vendorPhone": "+5561988084512"
     },
@@ -22,7 +22,7 @@
       "acquisitionDate": "01/01/2017",
       "category": "Hardware",
       "subCategory": "Computadores/Notebooks",
-      "status": 0,
+      "status": 2,
       "vendorMail": "vendor1@company.com",
       "vendorPhone": "+556133022585"
     }

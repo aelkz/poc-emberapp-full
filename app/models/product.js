@@ -15,4 +15,5 @@ export default DS.Model.extend({
   status: DS.attr('number'),
   vendorMail: DS.attr(),
   vendorPhone: DS.attr()
+
 });

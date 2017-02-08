@@ -12,19 +12,23 @@ import DS from 'ember-data';
 export default DS.RESTSerializer.extend({
   isNewSerializerAPI: true,
   normalizeResponse(store, primaryModelClass, payload, id, requestType) {
-    console.log('[2.1] calling serializers/product serializer.');
+    console.log('[2.1] calling serializers/product serializer. ['+requestType+']');
 
-    var normalizedRecords = [];
+    if ('findAll' == requestType) {
+      var normalizedRecords = [];
 
-    payload.map(function(record){
-      record.type = primaryModelClass.modelName;
-      normalizedRecords.push(record);
-    });
+      payload.map(function(record){
+        record.type = primaryModelClass.modelName;
+        normalizedRecords.push(record);
+      });
 
-    var obj = {};
-    obj[primaryModelClass.modelName] = normalizedRecords;
+      var obj = {};
+      obj[primaryModelClass.modelName] = normalizedRecords;
 
-    return this._super(store, primaryModelClass, obj, id, requestType);
+      return this._super(store, primaryModelClass, obj, id, requestType);
+    }else {
+      return this._super(store, primaryModelClass, payload, id, requestType);
+    }
   },
 
   normalizeFindRecordResponse(store, type, payload) {

@@ -1,4 +1,4 @@
-<form>
+<form class="form-inline">
   <h1>Product: {{model.name}}</h1>
 
   <div class="container-fluid">
@@ -6,20 +6,18 @@
       <div class="container-page">
 
         <div class="col-md-10">
-          <div class="form-group col-lg-6">
+          <div class="form-horizontal col-lg-6">
             <p>Name<span>*</span></p>
             <span class="icon-case"><i class="fa fa-tags"></i></span>
-            <input type="text" name="name" id="name" data-rule="required" data-msg="This field is required." title="Product name"/>
-            <div class="validation"></div>
-          </div>
+            <input type="text" class="form-control" readonly="readonly" value="{{model.name}}" />
+         </div>
         </div>
 
         <div class="col-md-10">
           <div class="form-group col-lg-11">
             <p>Description<span>*</span></p>
             <span class="icon-case"><i class="fa fa-newspaper-o"></i></span>
-            <textarea name="description" id="description" rows="3" data-rule="required" data-msg="This field is required." title="Product description"></textarea>
-            <div class="validation"></div>
+            <textarea rows="3" class="form-control" readonly="readonly">{{model.description}}</textarea>
           </div>
         </div>
 
@@ -27,22 +25,19 @@
           <div class="form-inline col-lg-3">
             <p>Unit value<span>*</span></p>
             <span class="icon-case"><i class="fa fa-usd"></i></span>
-            <input type="text" name="unitvalue" id="unitvalue" data-rule="required" data-msg="This field is required." title="Product unit value" />
-            <div class="validation"></div>
+            <input type="text" class="form-control" readonly="readonly" value="{{model.unitValue}}" />
           </div>
 
           <div class="form-inline col-lg-3">
             <p>Serial number<span>*</span></p>
             <span class="icon-case"><i class="fa fa-gears"></i></span>
-            <input type="text" name="serialnumber" id="serialnumber" data-rule="required" data-msg="This field is required."/>
-            <div class="validation"></div>
+            <input type="text" class="form-control" readonly="readonly" value="{{model.serialNumber}}" />
           </div>
 
           <div class="form-inline col-lg-3">
             <p>Acquisition Date <span>*</span></p>
             <span class="icon-case"><i class="fa fa-calendar-check-o"></i></span>
-            <input type="text" name="acquisitiondate" id="acquisitiondate" data-rule="required" data-msg="This field is required."/>
-            <div class="validation"></div>
+            <input type="text" class="form-control" readonly="readonly" value="{{model.acquisitionDate}}" />
           </div>
         </div>
 
@@ -50,15 +45,13 @@
           <div class="form-inline col-lg-5">
             <p>Category<span>*</span></p>
             <span class="icon-case"><i class="fa fa-caret-square-o-up"></i></span>
-            <input type="text" name="category" id="category" data-rule="required" data-msg="This field is required." title="Product category" />
-            <div class="validation"></div>
+            <input type="text" class="form-control" readonly="readonly" value="{{model.category}}" />
           </div>
 
           <div class="form-inline col-lg-5">
             <p>Subcategory<span>*</span></p>
             <span class="icon-case"><i class="fa fa-caret-square-o-down"></i></span>
-            <input type="text" name="subcategory" id="subcategory" data-rule="required" data-msg="This field is required."/>
-            <div class="validation"></div>
+            <input type="text" class="form-control" readonly="readonly" value="{{model.subCategory}}" />
           </div>
         </div>
 
@@ -67,10 +60,10 @@
             <p>Status<span>*</span></p>
             <div class="btn-group" data-toggle="buttons">
               <label class="btn btn-primary active">
-                <input type="radio" name="status" id="status" autocomplete="off" checked>Available
+                {{input type="radio" autocomplete="off" checked=model.isAvailable}}Available
               </label>
               <label class="btn btn-primary">
-                <input type="radio" name="status" id="status" autocomplete="off">In use
+                {{input type="radio" autocomplete="off" checked=model.isAvailable}}In Use
               </label>
             </div>
           </div>
@@ -78,8 +71,7 @@
           <div class="form-inline col-lg-5">
             <p>Vendor phone<span>*</span></p>
             <span class="icon-case"><i class="fa fa-phone"></i></span>
-            <input type="text" name="vendorphone" id="vendorphone" data-rule="required" data-msg="This field is required."/>
-            <div class="validation"></div>
+            <input type="text" class="form-control" readonly="readonly" value="{{model.vendorPhone}}" />
           </div>
         </div>
 
@@ -87,8 +79,7 @@
           <div class="form-inline col-lg-8">
             <p>Vendor mail<span>*</span></p>
             <span class="icon-case"><i class="fa fa-envelope"></i></span>
-            <input type="text" name="vendormail" id="vendormail" data-rule="required" data-msg="This field is required."/>
-            <div class="validation"></div>
+            <input type="text" class="form-control" readonly="readonly" value="{{model.vendorMail}}" />
           </div>
         </div>
 
@@ -96,6 +87,6 @@
     </section>
   </div>
 
-  <button type="submit" class="bouton-cancel" {{action 'cancel' model}}>Cancel</button>
+  <button type="submit" class="bouton-return" {{action 'cancel' model}}>Back</button>
 
 </form>

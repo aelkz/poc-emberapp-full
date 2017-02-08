@@ -138,6 +138,19 @@ i {
   font-size: 18px;
 }
 
+.bouton-return{
+  background-color: #4e5458;
+  color: #FFF;
+  text-align: center;
+  width: 100%;
+  border:0;
+  padding: 17px 25px;
+  border-radius: 0px 0px 5px 5px;
+  cursor: pointer;
+  margin-top: 40px;
+  font-size: 18px;
+}
+
 div.form-footer{
   background-color: #8E8E8E;
   color: #FFF;
@@ -191,4 +204,16 @@ div.form-footer{
 
 #sendmessage.show,.show  {
   display:block;
+}
+
+input[readonly].form-control{
+  height: 30px;
+  display: inline;
+  width: inherit;
+  min-width: 125px;
+}
+
+textarea[readonly].form-control{
+  display: inline;
+  width: 650px;
 }
