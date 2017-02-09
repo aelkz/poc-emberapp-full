@@ -1,0 +1,102 @@
+  <form>
+    <h1>New product registration:</h1>
+
+    <div class="container-fluid">
+      <section class="container">
+        <div class="container-page">
+
+          <div class="col-md-10">
+            <div class="form-group col-lg-6">
+              <p>Name<span>*</span></p>
+              <span class="icon-case"><i class="fa fa-tags"></i></span>
+              {{input type="text" name="name" id="name" value=model.name placeholder="The name of the product" data-msg="This field is required." data-rule="required"}}
+              <div class="validation"></div>
+            </div>
+          </div>
+
+          <div class="col-md-10">
+            <div class="form-group col-lg-11">
+              <p>Description<span>*</span></p>
+              <span class="icon-case"><i class="fa fa-newspaper-o"></i></span>
+              {{textarea name="description" id="description" rows="3" value=model.description placeholder="The description of the product" data-msg="This field is required." data-rule="required"}}
+              <div class="validation"></div>
+            </div>
+          </div>
+
+          <div class="col-md-10">
+            <div class="form-inline col-lg-3">
+              <p>Unit value<span>*</span></p>
+              <span class="icon-case"><i class="fa fa-usd"></i></span>
+              {{input type="text" name="unitValue" id="unitValue" value=model.unitValue data-msg="This field is required." data-rule="required"}}
+              <div class="validation"></div>
+            </div>
+
+            <div class="form-inline col-lg-3">
+              <p>Serial number<span>*</span></p>
+              <span class="icon-case"><i class="fa fa-gears"></i></span>
+              {{input type="text" name="serialNumber" id="serialNumber" value=model.serialNumber data-msg="This field is required." data-rule="required"}}
+              <div class="validation"></div>
+            </div>
+
+            <div class="form-inline col-lg-3">
+              <p>Acquisition Date <span>*</span></p>
+              <span class="icon-case"><i class="fa fa-calendar-check-o"></i></span>
+              {{input type="text" name="acquisitionDate" id="acquisitionDate" value=model.acquisitionDate data-msg="This field is required." data-rule="required"}}
+              <div class="validation"></div>
+            </div>
+          </div>
+
+          <div class="col-md-10">
+            <div class="form-inline col-lg-5">
+              <p>Category<span>*</span></p>
+              <span class="icon-case"><i class="fa fa-caret-square-o-up"></i></span>
+              {{input type="text" name="category" id="category" value=model.category placeholder="The category of the product" data-msg="This field is required." data-rule="required"}}
+              <div class="validation"></div>
+            </div>
+
+            <div class="form-inline col-lg-5">
+              <p>Subcategory<span>*</span></p>
+              <span class="icon-case"><i class="fa fa-caret-square-o-down"></i></span>
+              {{input type="text" name="subCategory" id="subCategory" value=model.subCategory placeholder="The sub category of the product" data-msg="This field is required." data-rule="required"}}
+              <div class="validation"></div>
+            </div>
+          </div>
+
+          <div class="col-md-10">
+            <div class="form-inline col-lg-5">
+              <p>Status<span>*</span></p>
+              <div class="btn-group" data-toggle="buttons">
+                <label class="btn btn-primary active">
+                  {{input type="radio" name="status" value=model.status data-msg="This field is required." data-rule="required" checked="true"}}
+                  Available
+                </label>
+                <label class="btn btn-primary">
+                  {{input type="radio" name="status" value=model.status data-msg="This field is required." data-rule="required" checked="true"}}
+                  In use
+                </label>
+              </div>
+            </div>
+
+            <div class="form-inline col-lg-5">
+              <p>Vendor phone<span>*</span></p>
+              <span class="icon-case"><i class="fa fa-phone"></i></span>
+              {{input type="text" name="vendorPhone" id="vendorPhone" value=model.vendorPhone data-msg="This field is required." data-rule="required" checked="true"}}
+              <div class="validation"></div>
+            </div>
+          </div>
+
+          <div class="col-md-10">
+            <div class="form-inline col-lg-8">
+              <p>Vendor mail<span>*</span></p>
+              <span class="icon-case"><i class="fa fa-envelope"></i></span>
+              {{input type="text" name="vendorMail" id="vendorMail" value=model.vendorMail data-msg="This field is required." data-rule="required" checked="true"}}
+              <div class="validation"></div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </div>
+
+    <button type="submit" class="bouton-contact" {{action 'save' model}}>Save</button>
+  </form>
