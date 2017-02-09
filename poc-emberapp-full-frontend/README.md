@@ -22,8 +22,8 @@ You will need the following things properly installed on your computer.
 
 ## Running / Development
 
-* `ember serve` (need backend running in background)
-* `npm run dev` (for json-server mock withou the backend project)
+* `ember serve` (need backend API running in background in port 3000. MongoDB sample: /app/database/mongodb/products.json)
+* `npm run dev` (for json-server mock withou the backend project. Local database: /app/database/db.json)
 * Visit your app at [http://localhost:4200](http://localhost:4200).
 
 ### Code Generators
